@@ -1,6 +1,11 @@
 from django.db import models
 
 
+__all__ = [
+    'Employee',
+]
+
+
 class Employee(models.Model):
     first_name = models.CharField(max_length=255, verbose_name='Имя')
     second_name = models.CharField(max_length=255, blank=True, verbose_name='Отчество')
