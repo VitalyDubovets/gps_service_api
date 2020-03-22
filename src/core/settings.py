@@ -61,7 +61,6 @@ INSTALLED_APPS = [
     # libs
     'django_filters',
     'django_redis',
-    'geopy',
     'rest_framework',
     'psycopg2',
 
