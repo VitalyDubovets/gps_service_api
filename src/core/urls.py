@@ -18,5 +18,6 @@ from django.urls import path, include
 
 urlpatterns = [
     path('api-auth/', include('rest_framework.urls')),
-    path('api/v1/employees/', include('employees.urls'))
+    path('api/v1/employees/', include('employees.urls')),
+    path('api/v1/locations-history/', include('locations_history.urls')),
 ]

@@ -5,6 +5,11 @@ from employees.models import Employee
 from employees.serializers import EmployeeSerializer
 
 
+__all__ = [
+    'EmployeeViewSet',
+]
+
+
 class EmployeeViewSet(viewsets.ModelViewSet):
     """
     Endpoint для получения, удаление, изменения работника

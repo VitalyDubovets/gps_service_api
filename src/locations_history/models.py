@@ -17,6 +17,7 @@ class LocationHistory(models.Model):
     class Meta:
         verbose_name = 'История местонахождения'
         verbose_name_plural = 'Истории местонахождений'
+        ordering = ['-date_of_stay']
 
     def __str__(self):
         return str(self.latitude) + ', ' + str(self.longitude)
