@@ -59,7 +59,11 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
 
     # libs
+    'django_filters',
+    'django_redis',
+    'geopy',
     'rest_framework',
+    'psycopg2',
 
     # project's app
     'employees',
