@@ -2,4 +2,4 @@ from django.apps import AppConfig
 
 
 class LocationHistoryConfig(AppConfig):
-    name = 'location_history'
+    name = 'locations_history'

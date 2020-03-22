@@ -63,6 +63,7 @@ INSTALLED_APPS = [
 
     # project's app
     'employees',
+    'locations_history',
 ]
 
 MIDDLEWARE = [
