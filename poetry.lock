@@ -62,6 +62,32 @@ django = ">=1.11"
 
 [[package]]
 category = "main"
+description = "The geodesic routines from GeographicLib"
+name = "geographiclib"
+optional = false
+python-versions = "*"
+version = "1.50"
+
+[[package]]
+category = "main"
+description = "Python Geocoding Toolbox"
+name = "geopy"
+optional = false
+python-versions = "*"
+version = "1.21.0"
+
+[package.dependencies]
+geographiclib = ">=1.49,<2"
+
+[package.extras]
+dev = ["mock", "six", "flake8 (>=3.6.0,<3.7.0)", "isort (>=4.3.4,<4.4.0)", "coverage", "pytest (>=3.10)", "readme-renderer", "sphinx", "sphinx-rtd-theme (>=0.4.0)", "contextlib2", "statistics"]
+dev-docs = ["readme-renderer", "sphinx", "sphinx-rtd-theme (>=0.4.0)"]
+dev-lint = ["mock", "six", "flake8 (>=3.6.0,<3.7.0)", "isort (>=4.3.4,<4.4.0)", "contextlib2"]
+dev-test = ["mock", "six", "coverage", "pytest (>=3.10)", "contextlib2", "statistics"]
+timezone = ["pytz"]
+
+[[package]]
+category = "main"
 description = "psycopg2 - Python-PostgreSQL Database Adapter"
 name = "psycopg2-binary"
 optional = false
@@ -107,7 +133,7 @@ python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*"
 version = "0.3.1"
 
 [metadata]
-content-hash = "951b74668808cbb4552c07a3c0a6a785c93dfcc461d9a8771e7e88d0928c32bd"
+content-hash = "dbf7af4eb5048f3ded7403f19e93853343286f2650e333e27a026930de5a3f41"
 python-versions = "3.6.9"
 
 [metadata.files]
@@ -130,6 +156,14 @@ django-redis = [
 djangorestframework = [
     {file = "djangorestframework-3.11.0-py3-none-any.whl", hash = "sha256:05809fc66e1c997fd9a32ea5730d9f4ba28b109b9da71fccfa5ff241201fd0a4"},
     {file = "djangorestframework-3.11.0.tar.gz", hash = "sha256:e782087823c47a26826ee5b6fa0c542968219263fb3976ec3c31edab23a4001f"},
+]
+geographiclib = [
+    {file = "geographiclib-1.50-py3-none-any.whl", hash = "sha256:51cfa698e7183792bce27d8fb63ac8e83689cd8170a730bf35e1a5c5bf8849b9"},
+    {file = "geographiclib-1.50.tar.gz", hash = "sha256:12bd46ee7ec25b291ea139b17aa991e7ef373e21abd053949b75c0e9ca55c632"},
+]
+geopy = [
+    {file = "geopy-1.21.0-py2.py3-none-any.whl", hash = "sha256:5de6fed0ee982e43a8e4243410477567cfccac22f8530edffc422761adf4e612"},
+    {file = "geopy-1.21.0.tar.gz", hash = "sha256:dc02b43ca5202696907b6b4f72431c8df455c812889dbb4e1240a672857f3adc"},
 ]
 psycopg2-binary = [
     {file = "psycopg2-binary-2.8.4.tar.gz", hash = "sha256:3a2522b1d9178575acee4adf8fd9f979f9c0449b00b4164bb63c3475ea6528ed"},

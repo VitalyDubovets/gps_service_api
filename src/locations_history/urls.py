@@ -1,9 +1,13 @@
+from django.urls import path
 from rest_framework import routers
 
-from .views import LocationHistoryViewSet
+from .views import *
 
 
 router = routers.DefaultRouter()
 router.register('', LocationHistoryViewSet)
 
-urlpatterns = router.urls
+urlpatterns = [
+    path('generator-test-data/', GeneratorTestDataView.as_view()),
+    *router.urls
+]
