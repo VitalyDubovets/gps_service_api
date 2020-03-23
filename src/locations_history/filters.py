@@ -1,4 +1,4 @@
-from django_filters import FilterSet, DateTimeFilter, IsoDateTimeFilter
+from django_filters import FilterSet, IsoDateTimeFilter
 
 from .models import LocationHistory
 
@@ -15,6 +15,7 @@ class LocationHistoryFilter(FilterSet):
     class Meta:
         model = LocationHistory
         fields = [
+            'employee',
             'date_of_stay',
             'start_date',
             'end_date',
