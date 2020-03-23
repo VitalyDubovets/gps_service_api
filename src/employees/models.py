@@ -19,7 +19,7 @@ class Employee(models.Model):
 
     def __str__(self):
         if self.second_name:
-            full_name = self.first_name + self.second_name + self.last_name
+            full_name = self.first_name + ' ' + self.second_name + ' ' + self.last_name
         else:
-            full_name = self.first_name + self.last_name
+            full_name = self.first_name + ' ' + self.last_name
         return full_name

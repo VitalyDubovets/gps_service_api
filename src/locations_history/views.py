@@ -43,17 +43,14 @@ class GeneratorTestDataView(APIView):
     def post(self, request, *args, **kwargs):
         service = ServiceTestData()
         serializer = GeneratorDataSerializer(data=request.data)
-        if serializer.is_valid(raise_exception=True):
-            starts_date = datetime.strptime(serializer.data['starts_date'], "%Y-%m-%dT%H:%M:%SZ")
-            end_date = datetime.strptime(serializer.data['end_date'], "%Y-%m-%dT%H:%M:%SZ")
-            data = service.form_test_data(
-                serializer.data['employee_id'],
-                starts_date,
-                end_date,
-                latitude=serializer.data['latitude'],
-                longitude=serializer.data['longitude']
-            )
-            response = Response(data, status=status.HTTP_201_CREATED)
-        else:
-            response = Response({'detail': 'Incorrect data'})
-        return response
+        serializer.is_valid(raise_exception=True)
+        starts_date = datetime.strptime(serializer.data['starts_date'], "%Y-%m-%dT%H:%M:%SZ")
+        end_date = datetime.strptime(serializer.data['end_date'], "%Y-%m-%dT%H:%M:%SZ")
+        data = service.form_test_data(
+            serializer.data['employee_id'],
+            starts_date,
+            end_date,
+            latitude=serializer.data['latitude'],
+            longitude=serializer.data['longitude']
+        )
+        return Response(data, status=status.HTTP_201_CREATED)
