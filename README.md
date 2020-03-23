@@ -44,11 +44,17 @@ docker-compose -f docker-compose.yml up -d
 POST запросом отправляется json c форматом 
 
 {
+
 	"first_name": "Лев",
+	
 	"second_name": "Николаевич",
+	
 	"last_name": "Толстой",
+	
 	"sex": "М",
+	
 	"birth_date": "1828-09-09"
+	
 }
 
 #### Эндпоинт для получения и создания истории перемещния сотрудника
@@ -58,27 +64,45 @@ POST запросом отправляется json c форматом
 POST запросом отправляется json c форматом 
 
 [
+
 	{
+	
 		"employee": {empolyee_id},
+		
 		"latitude": 63.9364,
+		
 		"longitude": 45.231453,
+		
 		"date_of_stay": "2020-03-23 15:18" 
+		
 	},
+	
 	{
+	
 		"employee": 2,
+		
 		"latitude": 63.987334,
+		
 		"longitude": 45.231253,
+		
 		"date_of_stay": "2020-03-23 15:20"
+		
 	}
+	
 ]
 
 либо
  
 {
+
     "employee": {empolyee_id},
+    
     "latitude": 63.9364,
+    
     "longitude": 45.231453,
+    
     "date_of_stay": "2020-03-23 15:18" 
+    
 }
 
 Оба запроса пройдут успешно
@@ -100,11 +124,17 @@ end_date - конец временного промежутка
 POST запросом отправляется json в формате 
 
 {
+
 	"employee_id": 3,
+	
 	"starts_date": "2020-03-23 10:41",
+	
 	"end_date": "2020-03-23 20:59",
+	
 	"latitude": 65.098345,
+	
 	"longitude": 45.123453
+	
 }
 
 employee_id - id сотрудника
